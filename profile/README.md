@@ -91,8 +91,8 @@ Until then, expect sparks, notes from the lab, and quiet, focused madness.
 
 ## 📜 Policies & Ethos
 
-- [🧠 Core Policy](https://github.com/AtomixCore/AtomixCore/blob/main/CORE-POLICY.md)  
-- [🤝 Contribution Guidelines](https://github.com/AtomixCore/AtomixCore/blob/main/CONTRIBUTING.md)  
+- [🧠 Core Policy](https://github.com/AtomixCore/.github/blob/main/CORE-POLICY.md)  
+- [🤝 Contribution Guidelines](https://github.com/AtomixCore/.github/blob/main/CONTRIBUTING.md)  
 
 --- 
 
