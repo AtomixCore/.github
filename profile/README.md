@@ -1,6 +1,8 @@
-# ⚛️ AtomixCore — The Core of Controlled Chaos
+# AtomixCore — The Core of Controlled Chaos
 
 > Where brilliant madness meets elegant code.
+
+![image](https://github.com/AtomixCore/.github/blob/main/profile-image.png)
 
 ---
 
