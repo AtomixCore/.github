@@ -2,8 +2,6 @@
 
 > Where brilliant madness meets elegant code.
 
-![image](https://github.com/AtomixCore/.github/blob/main/profile-image.png)
-
 ---
 
 ## Overview
