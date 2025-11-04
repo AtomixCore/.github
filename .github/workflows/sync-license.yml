@@ -30,10 +30,10 @@ jobs:
             gh repo clone AtomixCore/$repo tmp
             cd tmp
             cp ../LICENSE .
-            git config user.name "atomix-bot"
-            git config user.email "bot@atomixcore.dev"
+            git config user.name "AtomixCore"
+            git config user.email "atomixcore@proton.me"
             git add LICENSE
-            git commit -m "🔄 Sync LICENSE from .github"
+            git commit -m "Sync LICENSE from .github"
             git push
             cd ..
             rm -rf tmp
