@@ -1,0 +1,40 @@
+# .github/workflows/sync-license.yml
+name: Sync LICENSE to all repos
+
+on:
+  push:
+    paths:
+      - "LICENSE"
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout .github repo
+        uses: actions/checkout@v4
+
+      - name: Get list of target repositories
+        id: repos
+        run: |
+          echo "repos=$(gh repo list AtomixCore --limit 100 --json name -q '.[].name' | tr '\n' ' ')" >> $GITHUB_OUTPUT
+
+      - name: Sync LICENSE to each repo
+        env:
+          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          REPOS: ${{ steps.repos.outputs.repos }}
+        run: |
+          for repo in $REPOS; do
+            echo "Updating LICENSE in $repo..."
+            gh repo clone AtomixCore/$repo tmp
+            cd tmp
+            cp ../LICENSE .
+            git config user.name "atomix-bot"
+            git config user.email "bot@atomixcore.dev"
+            git add LICENSE
+            git commit -m "🔄 Sync LICENSE from .github"
+            git push
+            cd ..
+            rm -rf tmp
+          done
